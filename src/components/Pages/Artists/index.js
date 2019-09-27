@@ -17,7 +17,7 @@ export default props => {
   return (
     <div>
       <NavBar />
-      <Dashboard artists={artists} />
+      <Dashboard data={artists} keyData={"artists"}/>
     </div>
   );
 };

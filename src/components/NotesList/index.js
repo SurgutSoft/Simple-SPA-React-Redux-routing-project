@@ -13,7 +13,7 @@ class NotesList extends React.Component {
   render() {
     if (!this.props.notes.length) {
       return this.renderAddButton();
-    }
+    } 
     return (
       <ul className={styles["note-list"]}>
         {this.props.notes.map((note, index) => {
@@ -30,7 +30,7 @@ class NotesList extends React.Component {
 
   renderNote = note => <div className={styles["note-list-item"]}>{note}</div>;
 
-  renderAddButton = (index = 0) => (
+  renderAddButton = (index) => (
     <button
       data-index={index}
       className={styles["add-note"]}

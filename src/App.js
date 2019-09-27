@@ -8,10 +8,16 @@ import HomePage from "./components/Pages/Home";
 import ArtistsPage from "./components/Pages/Artists";
 import ArtworksPage from "./components/Pages/Artworks";
 import NotesPage from "./components/Pages/Notes";
+import { saveStateToLS } from './redux/store/localstorage';
 
 const store = configureStore();
 
+store.subscribe(() => {
+  saveStateToLS(store.getState());
+})
+
 class App extends Component {
+  debugger;
   render() {
     return (
       <Provider store={store}>

@@ -1,6 +1,7 @@
 import React from "react";
 
 import NavBar from "../../NavBar";
+import Dashboard from "../../Dashboard";
 
 // consider this data arrived from the API
 // <donotmodify>
@@ -15,5 +16,6 @@ const artworks = [
 export default props => (
   <div>
     <NavBar />
+    <Dashboard data={artworks} keyData={"artworks"} />
   </div>
 );

@@ -6,10 +6,11 @@ export default function(state = initState, action) {
   switch (action.type) {
     case ADD_NOTE:
       return [
-        ...state.slice(0, action.afterIndex + 1),
+        ...state.slice(0, Number(action.afterIndex) + 1),
         action.text,
-        ...state.slice(action.afterIndex + 1)
+        ...state.slice(Number(action.afterIndex) + 1)
       ];
+
     default:
       return state;
   }
